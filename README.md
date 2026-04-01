@@ -33,16 +33,21 @@ python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 * Sau khi Server khởi động thành công, hệ thống sẽ chạy tại địa chỉ: http://127.0.0.1:8000.
 ### Trên Google Collab/ Jupyter Notebook
-* Sau khi cài đặt thư viện chỉ cần thực hiện chạy lần lượt từ trên xuống các khối lệnh trong file API_Lab1.ipynb
+* Sau khi cài đặt thư viện chỉ cần thực hiện chạy lần lượt từ trên xuống các khối lệnh trong file API_Lab1.ipynb bao gồm:
+  * Create Config File (Tệp chứa đường dẫn mô hình)
+  * Build Model (Định nghĩa Class cho mô hình, thiết lập logic cho các hàm tải và chạy model)
+  * Initialize Model (Kết nối mạng và tải mô hình BLIP về máy, nạp trực tiếp lên GPU của Collab)
+  * Initialize API (Dựng máy chủ Web bằng FastAPI, tạo các cổng giao tiếp (như /generate), thiết lập các bước bắt lỗi người dùng và khởi chạy luồng ngầm (threading) để Server hoạt động mà không làm treo Colab.)
 
 ## 5. Hướng dẫn gọi API và ví dụ request/response
 
 Hệ thống cung cấp Endpoint chính để xử lý ảnh tại đường dẫn `/generate` thông qua phương thức `POST`. Dưới đây là cách gọi API bằng thư viện `requests` của Python trên hai môi trường khác nhau:
 
 ### Gọi API trên máy cá nhân (Local)
-* Khi chạy trên máy tính, Server sẽ mở ở địa chỉ cục bộ (localhost). Chạy file `test_api.py`
+* Khi chạy trên máy tính, Server sẽ mở ở địa chỉ cục bộ (localhost) thông qua chạy file `main.py` sau đó ta chạy file `test_api.py` với hình ảnh có sẵn nằm trong thư mục
 
 ### Gọi API trên Google Colab / Jupyter Notebook
+* Sử dụng link ảnh có đường dẫn URL và dán vào để chọn ra ảnh cần phân tích
 * Khi chạy local trên Colab, ta chỉ cần chạy ô nằm trong mục Call Local API
 * Khi chạy trên Colab qua Pinggy, bạn cần thay đổi URL thành đường link Public mà Pinggy đã cung cấp và chạy ô nằm trong mục Call Public API có trên file API_Lab1.ipynb
 
@@ -57,5 +62,5 @@ Image-Captioning-Project/
 ├── requirements.txt     # Danh sách các thư viện Python cần thiết
 ├── README.md            # Tài liệu hướng dẫn sử dụng 
 ├── API_Lab1.ipynb       # Notebook thử nghiệm model trên Google Collab, để sử dụng GPU T4
-└── sample_test.jpg      # Ảnh mẫu dùng để kiểm thử hệ thống
+├── sample_test.jpg      # Ảnh mẫu dùng để kiểm thử hệ thống
 └── sample_test1.jpg     # Ảnh mẫu dùng để kiểm thử hệ thống
