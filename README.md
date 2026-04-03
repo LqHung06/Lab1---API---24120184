@@ -126,4 +126,6 @@ Image-Captioning-Project/
 ```
 
 ## Video Demo:
-<video controls src="Video_demo.mp4" title="Title"></video>
+
+https://github.com/user-attachments/assets/c38d618b-ac0c-4d65-bf5b-d21c184d568e
+
