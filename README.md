@@ -121,4 +121,9 @@ Image-Captioning-Project/
 ├── README.md            # Tài liệu hướng dẫn sử dụng 
 ├── API_Lab1.ipynb       # Notebook thử nghiệm model trên Google Collab, để sử dụng GPU T4
 ├── sample_test.jpg      # Ảnh mẫu dùng để kiểm thử hệ thống
-└── sample_test1.jpg     # Ảnh mẫu dùng để kiểm thử hệ thống
+├── sample_test1.jpg     # Ảnh mẫu dùng để kiểm thử hệ thống
+└── Video_demo.mp4       # Video demo hệ thống
+```
+
+## Video Demo:
+<video controls src="Video_demo.mp4" title="Title"></video>
